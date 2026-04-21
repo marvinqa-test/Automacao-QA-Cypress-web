@@ -1,40 +1,45 @@
-# 🎯 Automação QA - Testes com Cypress
+# 🎯 Automação QA - Testes E2E com Cypress
 
-Projeto completo de automação com testes **E2E (Interface)** e **API** desenvolvido com **Cypress**.
+Projeto de testes end-to-end (E2E) desenvolvido com **Cypress**, cobrindo os principais fluxos da interface web.
 
 ## 📂 Estrutura do Projeto
 
 ```
 Automação Prática/
 ├── frontend/              # Testes E2E (Interface/UI)
-├── api/                   # Testes de API
+│   ├── cypress/
+│   ├── package.json
+│   ├── cypress.config.js
+│   └── README.md
+├── .gitignore
 ├── README.md             # Este arquivo
-└── .gitignore
+└── .git
 ```
 
 ---
 
-## 🚀 Guia Rápido
+## 🚀 Início Rápido
 
-### **Testes E2E (Frontend)**
+### 1️⃣ Instalar Dependências
+
 ```bash
 cd frontend
 npm install
-npm run test:open
 ```
 
-📖 [Documentação Completa →](./frontend/README.md)
+### 2️⃣ Executar Testes (Modo Interativo)
 
----
-
-### **Testes de API**
 ```bash
-cd api
-npm install
 npm run test:open
 ```
 
-📖 [Documentação Completa →](./api/README.md)
+O Cypress abrirá uma interface gráfica onde você poderá executar e visualizar os testes em tempo real.
+
+### 3️⃣ Executar Todos os Testes (Headless)
+
+```bash
+npm test
+```
 
 ---
 
@@ -45,46 +50,39 @@ npm run test:open
 
 ---
 
-## 🏗️ Arquitetura
+## 🏗️ Estrutura e Padrões
 
-### **Frontend** 
-- Testes end-to-end (E2E) de interface
-- Utiliza Page Object Model (POM)
-- Fixtures com dados de teste
-- Aplicação: [automationpratice.com.br](https://www.automationpratice.com.br)
-
-### **API**
-- Testes automatizados de endpoints
-- Helpers reutilizáveis
-- Fixtures centralizadas
-- API exemplo: [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
+### **Frontend - Testes E2E**
+- Testes end-to-end (E2E) da interface web
+- **Padrão:** Page Object Model (POM)
+- **Dados:** Fixtures centralizadas em JSON
+- **Aplicação:** [automationpratice.com.br](https://www.automationpratice.com.br)
 
 ---
 
-## 📦 Tecnologias
+## 📦 Dependências
 
-- **Cypress**: ^15.13.0 - Framework de testes
+- **cypress**: ^15.13.0 - Framework de testes e2e
 - **@faker-js/faker**: ^10.4.0 - Geração de dados aleatórios
-- **Node.js**: v14+
-- **npm**: v6+
 
 ---
 
 ## 💡 Padrões Utilizados
 
-- **Page Object Model (POM)**: Organização de elementos e ações por página
-- **API Helpers**: Encapsulamento de requisições HTTP
-- **Fixtures**: Dados de teste centralizados em JSON
-- **Custom Commands**: Reutilização de ações comuns
+- **Page Object Model (POM)**: Organização de elementos e ações por página para facilitar manutenção
+- **Fixtures**: Dados de teste centralizados em JSON para reutilização
+- **Custom Commands**: Comandos customizados do Cypress para ações comuns
+- **Nomenclatura**: `ts<número>-<descrição>.cy.js`
 
 ---
 
-## 📚 Documentação Completa
+## 📚 Documentação
 
-- [Frontend - E2E Tests](./frontend/README.md)
-- [API - API Tests](./api/README.md)
-- [Cypress Docs](https://docs.cypress.io/)
+📖 [Documentação Completa do Frontend](./frontend/README.md)
+
+- [Cypress Documentation](https://docs.cypress.io/)
 - [Best Practices](https://docs.cypress.io/guides/references/best-practices)
+- [API Reference](https://docs.cypress.io/api/table-of-contents)
 
 ---
 
